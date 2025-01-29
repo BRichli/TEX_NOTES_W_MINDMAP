@@ -1,0 +1,9 @@
+\begin{thebibliography}{1}
+
+\bibitem{Guria_2023}
+Sankha~Narayan Guria, Jeffrey~S. Foster, and David Van~Horn.
+\newblock Absynthe: Abstract interpretation-guided synthesis.
+\newblock {\em Proceedings of the ACM on Programming Languages},
+  7(PLDI):1584–1607, June 2023.
+
+\end{thebibliography}
