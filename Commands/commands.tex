@@ -1,0 +1,34 @@
+\newcommand{\contents}[2]{\import{./#1/}{#2.tex}}
+
+\newcommand\deflink[2][blue]{\begingroup %
+\hypersetup{linkcolor = #1} %
+\hyperlink{def:#2}{\textbf{#2}}
+\endgroup}
+
+\newcommand\defchap[2][blue]{\begingroup %
+\hypersetup{linkcolor = #1} %
+\hyperlink{chap:#2}{\textbf{#2}}
+\endgroup}
+
+\newcommand{\deflabel}[1]{\label{def:#1}}
+
+\newcommand{\defname}[1]{%
+{\centering %         
+\Large \deflabel{#1}\hypertarget{def:#1}{\textbf{Definition: #1}}}%
+}
+
+\newcommand{\rel}[3][blue]{\deflink[#1]{#2}}
+
+\newenvironment{define}[1]{ %
+
+\nobreak\vfil\penalty0\vfilneg 
+\vtop\bgroup 
+\defname{#1}
+\vspace{10pt}
+}
+{\xdef\tpd{\the\prevdepth}\egroup
+\prevdepth=\tpd \vspace{10pt} \rule{\paperwidth}{3pt} \vspace{10pt}}
+
+
+\newcommand\chapter[1]{\newpage{\Huge%
+\label{chap:#1}\hypertarget{chap:Chapter #1}{\textbf{Chapter #1}}\vspace{15pt}}}
